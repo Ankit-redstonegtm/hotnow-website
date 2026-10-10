@@ -1,0 +1,16 @@
+---
+interface Props {
+  href?: string;
+}
+
+const { href = '/' } = Astro.props;
+---
+
+<a class="brand" href={href} aria-label="HotNow, home">
+  <svg class="mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+    <rect x="3" y="18" width="6" height="11" rx="1.4"></rect>
+    <rect x="13" y="11" width="6" height="18" rx="1.4"></rect>
+    <rect class="mark-hot" x="23" y="4" width="6" height="25" rx="1.4"></rect>
+  </svg>
+  <span>HotNow</span>
+</a>

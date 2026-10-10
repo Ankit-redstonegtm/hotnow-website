@@ -1,0 +1,51 @@
+---
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+---
+
+{
+  id === 'slack' && (
+    <svg class="channel-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="#E01E5A" d="M6.2 14.6a2.2 2.2 0 1 1-2.2-2.2h2.2v2.2z" />
+      <path fill="#E01E5A" d="M7.3 14.6a2.2 2.2 0 0 1 4.4 0v5.5a2.2 2.2 0 1 1-4.4 0v-5.5z" />
+      <path fill="#36C5F0" d="M9.4 6.2a2.2 2.2 0 1 1 2.2-2.2v2.2H9.4z" />
+      <path fill="#36C5F0" d="M9.4 7.3a2.2 2.2 0 0 1 0 4.4H3.9a2.2 2.2 0 1 1 0-4.4h5.5z" />
+      <path fill="#2EB67D" d="M17.8 9.4a2.2 2.2 0 1 1 2.2 2.2h-2.2V9.4z" />
+      <path fill="#2EB67D" d="M16.7 9.4a2.2 2.2 0 0 1-4.4 0V3.9a2.2 2.2 0 1 1 4.4 0v5.5z" />
+      <path fill="#ECB22E" d="M14.6 17.8a2.2 2.2 0 1 1-2.2 2.2v-2.2h2.2z" />
+      <path fill="#ECB22E" d="M14.6 16.7a2.2 2.2 0 0 1 0-4.4h5.5a2.2 2.2 0 1 1 0 4.4h-5.5z" />
+    </svg>
+  )
+}
+{
+  id === 'salesforce' && (
+    <svg class="channel-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="#00A1E0"
+        d="M9.2 16.8c-.5.3-1.1.5-1.7.5-1.6 0-2.9-1.2-3.1-2.7A3.4 3.4 0 0 1 2 11.4c0-1.9 1.5-3.4 3.4-3.4.4 0 .8.1 1.2.2A4.1 4.1 0 0 1 10.4 5c1.6 0 3 1 3.6 2.4.4-.2.8-.3 1.3-.3 1.7 0 3.1 1.4 3.1 3.1 0 .2 0 .4-.1.6 1.1.5 1.9 1.6 1.9 2.9 0 1.8-1.4 3.2-3.2 3.2-.5 0-1-.1-1.4-.3a3.6 3.6 0 0 1-3.2 1.9c-.7 0-1.3-.2-1.8-.5-.4.5-1 .8-1.4.8z"
+      />
+    </svg>
+  )
+}
+{
+  id === 'email' && (
+    <svg class="channel-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="#5B8DEF" />
+      <path fill="#fff" d="M4.2 7.2 12 12.4l7.8-5.2v1.7L12 14.2 4.2 8.9V7.2z" />
+    </svg>
+  )
+}
+{
+  id === 'teams' && (
+    <svg class="channel-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="8" y="6.5" width="13" height="11" rx="2" fill="#7B83EB" />
+      <rect x="3" y="8" width="10" height="9.5" rx="1.8" fill="#4B53BC" />
+      <circle cx="8" cy="6.2" r="2.1" fill="#4B53BC" />
+      <circle cx="16.2" cy="5.4" r="1.6" fill="#7B83EB" />
+      <text x="6.1" y="14.6" fill="#fff" font-size="6" font-family="sans-serif" font-weight="700">T</text>
+    </svg>
+  )
+}

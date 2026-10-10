@@ -1,0 +1,42 @@
+---
+import CtaLink from '../CtaLink.astro';
+import { site } from '../../data/site';
+import { bookingNote, pricing, priceState, trialCta } from '../../data/home';
+
+const price = priceState();
+---
+
+<section class="section" id="pricing" aria-labelledby="pricing-title">
+  <div class="wrap">
+    <div class="section-copy">
+      <h2 id="pricing-title">{pricing.heading}</h2>
+    </div>
+    <article class="plan">
+      <p class="plan-name">{pricing.plan}</p>
+      {price.kind === 'price' ? <p class="price">{price.text}</p> : <p class="price-fallback">{price.text}</p>}
+      <ul class="includes">
+        {
+          pricing.includes.map((item) => (
+            <li>
+              <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+                <path
+                  d="M3 8.5 6.2 11.5 13 4.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>{item}</span>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="actions">
+        <CtaLink href={site.bookingUrl} label={trialCta} track="Start trial" location="pricing" />
+        <p class="support">{bookingNote}</p>
+      </div>
+    </article>
+  </div>
+</section>

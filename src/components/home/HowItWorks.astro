@@ -1,0 +1,58 @@
+---
+import { howItWorks } from '../../data/home';
+---
+
+<section class="section" id="how-it-works" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="section-copy">
+      <h2 id="how-title">{howItWorks.heading}</h2>
+    </div>
+    <ol class="steps">
+      {
+        howItWorks.steps.map((step) => (
+          <li class="step">
+            <div class="step-head">
+              <span class="step-num">{step.number}</span>
+              <h3>{step.title}</h3>
+            </div>
+            <p>{step.body}</p>
+            <div class="step-preview">
+              {step.preview.kind === 'website' && (
+                <div>
+                  <p class="field-label">{step.preview.label}</p>
+                  <p class="fake-field">{step.preview.value}</p>
+                </div>
+              )}
+              {step.preview.kind === 'customers' && (
+                <div>
+                  <p class="field-label">{step.preview.customersLabel}</p>
+                  <ul class="chips">
+                    {step.preview.customers.map((customer) => (
+                      <li>{customer}</li>
+                    ))}
+                  </ul>
+                  <p class="field-label">{step.preview.happeningLabel}</p>
+                  <p class="happening">{step.preview.happening}</p>
+                </div>
+              )}
+              {step.preview.kind === 'list' && (
+                <div>
+                  <p class="field-label">{step.preview.label}</p>
+                  <p class="list-count">{step.preview.count}</p>
+                  <ul class="mini-leads">
+                    {step.preview.rows.map((row) => (
+                      <li>
+                        <span>{row.company}</span>
+                        <span>{row.reason}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

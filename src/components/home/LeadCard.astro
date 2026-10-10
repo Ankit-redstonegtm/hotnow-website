@@ -1,0 +1,47 @@
+---
+import type { Lead } from '../../data/home';
+
+interface Props {
+  lead: Lead;
+}
+
+const { lead } = Astro.props;
+---
+
+<article class="lead-card">
+  <header class="lead-top">
+    <div>
+      <p class="field-label">Company</p>
+      <p class="lead-company">{lead.company}</p>
+    </div>
+    <p class="segment">{lead.segment}</p>
+  </header>
+  <div class="contacts">
+    <p class="field-label">Who to contact</p>
+    <ol>
+      {
+        lead.contacts.map((contact) => (
+          <li>
+            <p class="priority">
+              <span>{contact.priority}</span>
+              {contact.badge && <span class="badge">{contact.badge}</span>}
+            </p>
+            <p class="contact-name">{contact.name}</p>
+            <p class="contact-title">{contact.title}</p>
+            <p class="contact-mobile">
+              <span>Mobile</span>
+              {contact.mobile}
+            </p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+  <div class="why-now">
+    <p class="field-label">Why they need you right now</p>
+    <ul>
+      {lead.evidence.map((line) => <li>{line}</li>)}
+    </ul>
+    <p class="tie">{lead.tie}</p>
+  </div>
+</article>

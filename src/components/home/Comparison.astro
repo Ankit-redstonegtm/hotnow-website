@@ -1,0 +1,32 @@
+---
+import { comparison } from '../../data/home';
+---
+
+<section class="section" aria-labelledby="compare-title">
+  <div class="wrap">
+    <div class="section-copy">
+      <h2 id="compare-title">{comparison.heading}</h2>
+      <p>{comparison.intro}</p>
+    </div>
+    <div class="compare-wrap">
+      <table class="compare">
+        <caption class="sr-only">Lead database compared with HotNow</caption>
+        <thead>
+          <tr>
+            {comparison.columns.map((column) => <th scope="col">{column}</th>)}
+          </tr>
+        </thead>
+        <tbody>
+          {
+            comparison.rows.map((row) => (
+              <tr>
+                <td data-label={comparison.columns[0]}>{row[0]}</td>
+                <td data-label={comparison.columns[1]}>{row[1]}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

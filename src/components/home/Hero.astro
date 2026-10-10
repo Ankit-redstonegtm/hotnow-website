@@ -1,0 +1,32 @@
+---
+import CtaLink from '../CtaLink.astro';
+import ChannelRow from './ChannelRow.astro';
+import SlackPreview from './SlackPreview.astro';
+import { site } from '../../data/site';
+import { bookingNote, hero, setupNote, trialCta } from '../../data/home';
+---
+
+<section class="section hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>
+        {hero.titleLines.map((line, index) => <span class={index === 1 ? 'grad' : undefined}>{line}</span>)}
+      </h1>
+      <p class="sub">{hero.sub}</p>
+      <p class="body">{hero.body}</p>
+      <p class="body">{hero.detail}</p>
+      <p class="morning">{hero.morning}</p>
+      <div class="actions">
+        <CtaLink href={site.bookingUrl} label={trialCta} track="Start trial" location="hero" />
+        <p class="support">{setupNote}</p>
+        <p class="support">{bookingNote}</p>
+      </div>
+    </div>
+    <div class="frame">
+      <SlackPreview />
+      <ChannelRow />
+      <p class="frame-foot">{hero.channels}</p>
+    </div>
+  </div>
+</section>

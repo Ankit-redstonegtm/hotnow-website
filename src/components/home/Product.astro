@@ -1,0 +1,16 @@
+---
+import LeadCard from './LeadCard.astro';
+import { leads, product } from '../../data/home';
+---
+
+<section class="section" id="leads" aria-labelledby="leads-title">
+  <div class="wrap">
+    <div class="section-copy">
+      <h2 id="leads-title">{product.heading}</h2>
+      <p>{product.context}</p>
+    </div>
+    <div class="lead-grid">
+      {leads.map((lead) => <LeadCard lead={lead} />)}
+    </div>
+  </div>
+</section>

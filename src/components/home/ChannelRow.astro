@@ -1,0 +1,24 @@
+---
+import ChannelIcon from './ChannelIcon.astro';
+import { delivery } from '../../data/home';
+
+interface Props {
+  detailed?: boolean;
+}
+
+const { detailed = false } = Astro.props;
+---
+
+<ul class:list={['channel-row', detailed && 'channel-row-detail']}>
+  {
+    delivery.channels.map((channel) => (
+      <li>
+        <ChannelIcon id={channel.id} />
+        <span>
+          <strong>{channel.name}</strong>
+          {detailed && <span class="channel-text">{channel.text}</span>}
+        </span>
+      </li>
+    ))
+  }
+</ul>

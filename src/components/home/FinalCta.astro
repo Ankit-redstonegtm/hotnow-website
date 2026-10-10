@@ -1,0 +1,16 @@
+---
+import CtaLink from '../CtaLink.astro';
+import { site } from '../../data/site';
+import { bookingNote, finalCta, trialCta } from '../../data/home';
+---
+
+<section class="section final" aria-labelledby="final-title">
+  <div class="wrap">
+    <h2 id="final-title">{finalCta.heading}</h2>
+    <p>{finalCta.body}</p>
+    <div class="actions">
+      <CtaLink href={site.bookingUrl} label={trialCta} track="Start trial" location="final" />
+      <p class="support">{bookingNote}</p>
+    </div>
+  </div>
+</section>

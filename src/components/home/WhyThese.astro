@@ -1,0 +1,30 @@
+---
+import { why } from '../../data/home';
+---
+
+<section class="section" aria-labelledby="why-title">
+  <div class="wrap">
+    <div class="section-copy why-copy">
+      <h2 id="why-title">{why.heading}</h2>
+      <p>{why.body}</p>
+    </div>
+    <ol class="chain" aria-label="Situation, why it matters, who to contact.">
+      {
+        why.chain.map((item) => (
+          <li>
+            <p class="field-label">{item.label}</p>
+            <p>{item.text}</p>
+          </li>
+        ))
+      }
+    </ol>
+    <div class="situations-block">
+      <h3>{why.situationsHeading}</h3>
+      <ul class="situations">
+        {why.situations.map((item) => <li>{item}</li>)}
+      </ul>
+      <p class="note">{why.note}</p>
+    </div>
+    <p class="closer">{why.closer}</p>
+  </div>
+</section>
