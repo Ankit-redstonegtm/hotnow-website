@@ -1,0 +1,46 @@
+---
+import Logo from './Logo.astro';
+import CtaLink from './CtaLink.astro';
+import { nav, navCta, site } from '../data/site';
+---
+
+<header class="site-header">
+  <div class="wrap bar">
+    <Logo />
+    <nav class="primary-nav" aria-label="Primary">
+      {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+    <div class="header-end">
+      <CtaLink
+        href={site.bookingUrl}
+        label={navCta}
+        variant="small"
+        track="Start trial"
+        location="nav"
+      />
+      <details class="menu">
+        <summary>
+          <span class="when-closed">Menu</span>
+          <span class="when-open">Close</span>
+        </summary>
+        <nav class="menu-panel" aria-label="Mobile">
+          {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<script>
+  const menu = document.querySelector('.menu');
+  if (menu instanceof HTMLDetailsElement) {
+    menu.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') menu.open = false;
+    });
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        menu.open = false;
+      });
+    });
+  }
+</script>

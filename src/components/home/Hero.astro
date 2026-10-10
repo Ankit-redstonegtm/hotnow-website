@@ -1,0 +1,60 @@
+---
+import CtaLink from '../CtaLink.astro';
+import { site } from '../../data/site';
+import { bookingNote, exampleLabel, hero, heroLeads, setupNote, trialCta } from '../../data/home';
+---
+
+<section class="section hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>
+        {hero.titleLines.map((line) => <span>{line}</span>)}
+      </h1>
+      <p class="sub">{hero.sub}</p>
+      <p class="body">{hero.body}</p>
+      <div class="actions">
+        <CtaLink href={site.bookingUrl} label={trialCta} track="Start trial" location="hero" />
+        <p class="support">{setupNote}</p>
+        <p class="support">{bookingNote}</p>
+      </div>
+    </div>
+
+    <figure class="preview" aria-label={`${exampleLabel}. ${hero.previewTitle}. ${hero.previewCount}.`}>
+      <figcaption class="preview-top">
+        <div>
+          <p class="preview-kicker">{site.name}</p>
+          <p class="preview-title">{hero.previewTitle}</p>
+          <p class="preview-count">{hero.previewCount}</p>
+        </div>
+        <p class="example-tag">{exampleLabel}</p>
+      </figcaption>
+      <div class="lead-list">
+        {
+          heroLeads.map((lead) => (
+            <article class="lead-card">
+              <p class="field-label">Company</p>
+              <p class="lead-company">{lead.company}</p>
+              <p class="field-label">Reason to reach out</p>
+              <p class="reason">{lead.reason}</p>
+              <p class="field-label">Person to contact</p>
+              <p class="person-line">
+                {lead.person}, {lead.role}
+              </p>
+              <dl class="avail">
+                <div>
+                  <dt>Email</dt>
+                  <dd>{lead.email}</dd>
+                </div>
+                <div>
+                  <dt>Mobile</dt>
+                  <dd>{lead.mobile}</dd>
+                </div>
+              </dl>
+            </article>
+          ))
+        }
+      </div>
+      <p class="preview-foot">{hero.previewFoot}</p>
+    </figure>
+  </div>
+</section>

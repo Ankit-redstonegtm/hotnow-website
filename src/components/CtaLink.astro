@@ -1,0 +1,23 @@
+---
+interface Props {
+  href: string;
+  label: string;
+  variant?: 'primary' | 'small';
+  track?: string;
+  location?: string;
+}
+
+const { href, label, variant = 'primary', track, location } = Astro.props;
+const external = /^https?:\/\//.test(href);
+---
+
+<a
+  class:list={['btn', variant === 'small' && 'btn-small']}
+  href={href}
+  data-track={track}
+  data-track-location={location}
+  {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+>
+  {label}
+  {external && <span class="sr-only"> (opens in a new tab)</span>}
+</a>

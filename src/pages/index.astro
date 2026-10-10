@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/home/Hero.astro';
+import Product from '../components/home/Product.astro';
+import HowItWorks from '../components/home/HowItWorks.astro';
+import WhyThese from '../components/home/WhyThese.astro';
+import Comparison from '../components/home/Comparison.astro';
+import Delivery from '../components/home/Delivery.astro';
+import Pricing from '../components/home/Pricing.astro';
+import FinalCta from '../components/home/FinalCta.astro';
+import { site } from '../data/site';
+---
+
+<Base title={site.title} description={site.description} imageAlt={site.imageAlt}>
+  <Hero />
+  <Product />
+  <HowItWorks />
+  <WhyThese />
+  <Comparison />
+  <Delivery />
+  <Pricing />
+  <FinalCta />
+</Base>

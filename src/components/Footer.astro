@@ -1,0 +1,34 @@
+---
+import Logo from './Logo.astro';
+import { nav, site } from '../data/site';
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <Logo />
+      <p class="domain"><a href="/">{site.domain}</a></p>
+    </div>
+    <nav aria-label="Footer">
+      {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+    <div class="footer-contact">
+      <p class="field-label">Contact</p>
+      <a
+        href={site.bookingUrl}
+        data-track="Start trial"
+        data-track-location="footer"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Book a call
+        <span class="sr-only"> (opens in a new tab)</span>
+      </a>
+      {
+        site.email && (
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+        )
+      }
+    </div>
+  </div>
+</footer>

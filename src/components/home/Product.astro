@@ -1,0 +1,38 @@
+---
+import { exampleLabel, product } from '../../data/home';
+---
+
+<section class="section band" id="example-leads" aria-labelledby="example-leads-title">
+  <div class="wrap product-grid">
+    <div class="section-copy">
+      <h2 id="example-leads-title">{product.heading}</h2>
+      <p>{product.context}</p>
+      <p>{product.prompt}</p>
+    </div>
+    <article class="record" aria-label={`${exampleLabel}. ${product.company}.`}>
+      <p class="example-tag">{exampleLabel}</p>
+      <h3>{product.company}</h3>
+      <p class="field-label">{product.question}</p>
+      <p class="reason reason-block">{product.why}</p>
+      <p class="source">
+        <span class="field-label">{product.sourceLabel}</span>
+        {product.source}
+      </p>
+      <div class="person-block">
+        <p class="field-label">{product.personLabel}</p>
+        <p class="lead-company">{product.person}</p>
+        <p class="role">{product.role}</p>
+        <dl class="avail">
+          <div>
+            <dt>{product.emailLabel}</dt>
+            <dd>{product.email}</dd>
+          </div>
+          <div>
+            <dt>{product.mobileLabel}</dt>
+            <dd>{product.mobile}</dd>
+          </div>
+        </dl>
+      </div>
+    </article>
+  </div>
+</section>

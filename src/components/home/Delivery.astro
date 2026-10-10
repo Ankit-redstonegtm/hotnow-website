@@ -1,0 +1,39 @@
+---
+import { delivery, exampleLabel } from '../../data/home';
+---
+
+<section class="section band" aria-labelledby="delivery-title">
+  <div class="wrap delivery-grid">
+    <div class="section-copy">
+      <h2 id="delivery-title">{delivery.heading}</h2>
+      <p>{delivery.body}</p>
+      <p class="note">{delivery.status}</p>
+      <ul class="destinations">
+        {
+          delivery.destinations.map((name) => (
+            <li>
+              <span>{name}</span>
+              <span class="planned">{delivery.plannedLabel}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <figure class="slack" aria-label={`${exampleLabel}. Slack message. Slack delivery is planned.`}>
+      <figcaption class="slack-top">
+        <span class="avatar" aria-hidden="true">H</span>
+        <span class="slack-app">{delivery.message.app}</span>
+        <span class="planned">{delivery.message.channel}</span>
+        <span class="planned">{delivery.plannedLabel}</span>
+      </figcaption>
+      <div class="slack-body">
+        <p>{delivery.message.text}</p>
+        <ol>
+          {delivery.message.lines.map((line) => <li>{line}</li>)}
+        </ol>
+        <p class="slack-more">{delivery.message.more}</p>
+      </div>
+      <p class="preview-foot">{exampleLabel}. Slack delivery is planned.</p>
+    </figure>
+  </div>
+</section>
