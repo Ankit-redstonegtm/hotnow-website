@@ -7,12 +7,12 @@ export const site = {
   name: 'HotNow',
   domain: 'hotnow.co',
   url: clean(import.meta.env.PUBLIC_SITE_URL, 'https://hotnow.co'),
-  title: '10 leads every day',
+  title: 'Know who to sell to right now',
   description:
-    'Not random companies. Companies that have a reason to need what you sell. 10 researched leads every day, with the right person to contact.',
-  imageAlt: 'HotNow. 10 leads every day. Companies that have a reason to need what you sell.',
+    'The hard part of selling is knowing who needs you today. HotNow finds 10 companies every day that are in that situation, with the people to contact and the reason to call.',
+  imageAlt: 'HotNow. Know who to sell to right now. 10 companies every day, with a reason to call.',
   /**
-   * Every "Start your free trial" and "Start free trial" link uses this URL.
+   * Every trial link uses this URL.
    * Override with PUBLIC_BOOKING_URL. The fallback is the shared discovery call.
    */
   bookingUrl: clean(
@@ -31,6 +31,6 @@ export const navCta = 'Start free trial';
 
 export const nav = [
   { label: 'How it works', href: '/#how-it-works' },
-  { label: 'Example leads', href: '/#example-leads' },
+  { label: 'Leads', href: '/#leads' },
   { label: 'Pricing', href: '/#pricing' },
 ] as const;

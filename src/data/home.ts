@@ -1,6 +1,6 @@
 /**
- * Homepage copy, sample leads, and pricing.
- * Companies and people here are fictional. The page labels them as examples.
+ * Homepage copy, leads, and pricing.
+ * Companies and people here are fictional. The page does not label them.
  *
  * MONTHLY_PRICE is the single plan price, shown as written.
  * Set it to '' to show priceFallback instead.
@@ -9,75 +9,148 @@ export const MONTHLY_PRICE = '$29/month';
 
 export const priceFallback = 'Pricing available during your trial call.';
 
-export const exampleLabel = 'Illustrative example';
-
 export const trialCta = 'Start your free trial';
 
 export const bookingNote = 'Book a quick call to get started.';
 
 export const setupNote = '5-minute setup.';
 
-export type SampleLead = {
-  company: string;
-  reason: string;
-  person: string;
-  role: string;
-  email: string;
+export type LeadContact = {
+  priority: string;
+  badge: string;
+  name: string;
+  title: string;
   mobile: string;
 };
 
-export const hero = {
-  titleLines: ['10 leads.', 'Every day.'],
-  sub: 'Not random companies. Companies that have a reason to need what you sell.',
-  body: 'Tell us about your business in 5 minutes. Get 10 researched leads every day, with the right people to contact.',
-  previewTitle: 'Your leads for today',
-  previewCount: '10 companies found',
-  previewFoot: 'Showing 3 of 10',
+export type Lead = {
+  company: string;
+  segment: string;
+  evidence: string[];
+  tie: string;
+  contacts: LeadContact[];
 };
 
-export const heroLeads: SampleLead[] = [
+export const hero = {
+  titleLines: ['Know who to sell to.', 'Right now.'],
+  sub: 'The hard part of selling is knowing who needs what you sell today.',
+  body: 'HotNow finds companies in that situation. You get 10 every day, with the people to contact and the reason to call.',
+  detail: 'We read the web for what is happening at their business right now.',
+  frameTitle: 'Your leads for today',
+  frameCount: '10 companies found',
+  frameContext: 'For a company that sells field sales software.',
+  frameFoot: 'Summit Roofing, and 9 more today.',
+};
+
+export const leads: Lead[] = [
   {
     company: 'Summit Roofing',
-    reason: 'Hiring field salespeople across three territories.',
-    person: 'Michael Carter',
-    role: 'VP of Sales',
-    email: 'Available',
-    mobile: 'Available',
+    segment: 'Home services',
+    evidence: [
+      'They posted field sales roles in three territories.',
+      'They set up a new regional structure.',
+      'They are adding reps in each of those territories.',
+    ],
+    tie: 'That is a reason to talk about managing a field sales team.',
+    contacts: [
+      {
+        priority: 'Priority 1',
+        badge: 'Champion',
+        name: 'Michael Carter',
+        title: 'VP of Sales',
+        mobile: '(•••) •••-0148',
+      },
+      {
+        priority: 'Priority 2',
+        badge: '',
+        name: 'Elena Vasquez',
+        title: 'Director of Sales',
+        mobile: '(•••) •••-2261',
+      },
+      {
+        priority: 'Priority 3',
+        badge: '',
+        name: 'Chris Dalton',
+        title: 'Regional Manager',
+        mobile: '(•••) •••-7734',
+      },
+    ],
   },
   {
     company: 'Northstar Retail',
-    reason: 'Opening five new stores.',
-    person: 'Priya Shah',
-    role: 'VP of Sales',
-    email: 'Available',
-    mobile: 'Available',
+    segment: 'Retail',
+    evidence: [
+      'They are opening five new stores.',
+      'They are hiring managers for those stores.',
+      'They assigned a sales territory to each opening.',
+    ],
+    tie: 'That is a reason to talk about running reps across new locations.',
+    contacts: [
+      {
+        priority: 'Priority 1',
+        badge: 'Champion',
+        name: 'Priya Shah',
+        title: 'VP of Sales',
+        mobile: '(•••) •••-3380',
+      },
+      {
+        priority: 'Priority 2',
+        badge: '',
+        name: 'Owen Briggs',
+        title: 'Director of Stores',
+        mobile: '(•••) •••-4419',
+      },
+      {
+        priority: 'Priority 3',
+        badge: '',
+        name: 'Maya Chen',
+        title: 'Regional Manager',
+        mobile: '(•••) •••-9026',
+      },
+    ],
   },
   {
     company: 'Atlas Logistics',
-    reason: 'Hiring a regional sales team.',
-    person: 'Daniel Okonkwo',
-    role: 'Head of Sales',
-    email: 'Available',
-    mobile: 'Available',
+    segment: 'Logistics',
+    evidence: [
+      'They are hiring a regional sales team.',
+      'They posted a head of sales role.',
+      'They listed new routes they plan to cover.',
+    ],
+    tie: 'That is a reason to talk about how that new team will work.',
+    contacts: [
+      {
+        priority: 'Priority 1',
+        badge: 'Champion',
+        name: 'Daniel Okonkwo',
+        title: 'Head of Sales',
+        mobile: '(•••) •••-1184',
+      },
+      {
+        priority: 'Priority 2',
+        badge: '',
+        name: 'Hannah Cole',
+        title: 'Director of Regional Sales',
+        mobile: '(•••) •••-5572',
+      },
+      {
+        priority: 'Priority 3',
+        badge: '',
+        name: 'Luis Romero',
+        title: 'Sales Operations Lead',
+        mobile: '(•••) •••-6641',
+      },
+    ],
   },
 ];
 
+export const heroLead = leads[0];
+
+export const moreLeads = leads.slice(1);
+
 export const product = {
   heading: "Here's what a lead looks like.",
-  context: 'Example. The customer sells field sales software.',
-  prompt: 'The card answers: why this company, and who do you contact?',
-  question: 'Why did HotNow choose this company?',
-  company: 'Summit Roofing',
-  why: 'Hiring field salespeople across three territories. Summit Roofing appears to be expanding its sales operation. That creates a reason to talk about managing field sales teams.',
-  sourceLabel: 'Source',
-  source: 'Recent job postings',
-  personLabel: 'Person to contact',
-  person: 'Michael Carter',
-  role: 'VP of Sales',
-  emailLabel: 'Email',
-  email: 'Available',
-  mobileLabel: 'Mobile',
-  mobile: 'Available',
+  context: 'Same day. Same offer. Two more companies in the situation right now.',
 };
 
 export const howItWorks = {
@@ -108,7 +181,7 @@ export const howItWorks = {
     {
       number: '3',
       title: 'Get 10 leads every day.',
-      body: 'Each one comes with a reason and the right person to contact.',
+      body: 'Each one comes with a reason and the right people to contact.',
       preview: {
         kind: 'list' as const,
         label: "Today's list",
@@ -124,7 +197,7 @@ export const howItWorks = {
 
 export const why = {
   heading: 'Why these 10 companies?',
-  body: 'Because something is happening at their business that makes your product relevant. We research companies across the web. We look for situations your product can help with. Then we find the people you should contact.',
+  body: 'Because something is happening at their business right now. We read the web for that situation. We look for the pain your product fits. Then we rank the people you should contact.',
   chain: [
     {
       label: 'Situation',
@@ -132,54 +205,55 @@ export const why = {
     },
     {
       label: 'Why it matters',
-      text: 'The company appears to be expanding its sales operation. That creates a reason to talk about managing field sales teams.',
+      text: 'The sales team is growing right now. That is a reason to talk about managing it.',
     },
     {
       label: 'Who to contact',
-      text: 'Michael Carter, VP of Sales',
+      text: 'Michael Carter, VP of Sales. Priority 1.',
     },
   ],
-  examplesHeading: 'Situations we might find',
-  examples: [
+  situationsHeading: 'What we look for',
+  situations: [
     'Hiring salespeople',
     'A retailer opening new stores',
     'Expanding into new markets',
     'Hiring for a problem your software solves',
     'Using a process your product could replace',
   ],
-  note: 'These are examples, not universal rules. The situations depend on what you sell.',
-  closer: 'Every lead comes with a reason.',
+  note: 'The situations depend on what you sell. They are not the same for every company.',
+  closer: 'Every lead comes with a reason to call now.',
 };
 
 export const comparison = {
   heading: "A list of companies isn't a list of opportunities.",
   columns: ['Lead database', 'HotNow'] as const,
   rows: [
-    ['Companies matching filters', 'Companies with a reason to need your product'],
+    ['Companies matching filters', 'Companies in the situation right now'],
     ['Hundreds of names', '10 researched leads'],
-    ['You research each company', 'We show you why it matters'],
-    ['You find the right person', 'We find the contact'],
+    ['You research each company', 'We show you why it matters today'],
+    ['You find the right person', 'We rank the people to contact'],
     ['You build the list', 'Your leads arrive every day'],
   ],
 };
 
-export const delivery = {
-  heading: 'Your leads come to you.',
-  body: 'Get your 10 leads where you work.',
-  status: 'These destinations are planned. None of them are live yet.',
-  destinations: ['Slack', 'Salesforce', 'Microsoft Teams', 'Email', 'Google Sheets'],
-  plannedLabel: 'Planned',
-  message: {
-    app: 'HotNow',
-    channel: 'Slack',
-    text: 'Your 10 leads for today are ready.',
-    lines: [
-      'Summit Roofing, hiring field salespeople in three territories.',
-      'Northstar Retail, opening five new stores.',
-      'Atlas Logistics, hiring a regional sales team.',
-    ],
-    more: 'View all 10',
-  },
+export const outcomes = {
+  heading: 'What changes for you.',
+  intro: 'You stop guessing who to sell to.',
+  items: [
+    {
+      title: 'The day has a start.',
+      body: 'Ten companies are ready. Each one is in a situation that needs what you sell.',
+    },
+    {
+      title: 'The call has a reason.',
+      body: 'You know who to contact. You know why they might talk today.',
+    },
+    {
+      title: 'The pipeline refills.',
+      body: 'The list comes back every day. Timely accounts keep showing up.',
+    },
+  ],
+  closer: 'Reps know who to call and why. That work is done before the first conversation.',
 };
 
 export const pricing = {
@@ -192,13 +266,12 @@ export const pricing = {
     'Verified emails',
     'Mobile numbers when available',
     'Sources behind the research',
-    'Delivery to your chosen destination when supported',
   ],
 };
 
 export const finalCta = {
-  heading: 'Your next 10 leads are waiting.',
-  body: "Tell us what you sell. We'll find companies worth reaching out to.",
+  heading: 'Know who to sell to tomorrow.',
+  body: "Tell us what you sell. We'll find companies that need it right now.",
 };
 
 export function priceState(price: string = MONTHLY_PRICE) {

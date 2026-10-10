@@ -1,5 +1,5 @@
 ---
-import { exampleLabel, howItWorks } from '../../data/home';
+import { howItWorks } from '../../data/home';
 ---
 
 <section class="section" id="how-it-works" aria-labelledby="how-title">
@@ -16,8 +16,7 @@ import { exampleLabel, howItWorks } from '../../data/home';
               <h3>{step.title}</h3>
             </div>
             <p>{step.body}</p>
-            <div class="step-preview" aria-label={`Preview. ${exampleLabel}.`}>
-              <p class="example-tag">{exampleLabel}</p>
+            <div class="step-preview">
               {step.preview.kind === 'website' && (
                 <div>
                   <p class="field-label">{step.preview.label}</p>

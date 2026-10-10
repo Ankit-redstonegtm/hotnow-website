@@ -5,11 +5,11 @@ Marketing site for hotnow.co. Static Astro pages. No accounts, database, or paym
 ## Edit the page
 
 - `src/data/site.ts` holds the name, nav, booking link fallback, and contact email.
-- `src/data/home.ts` holds the page copy, sample leads, and price.
+- `src/data/home.ts` holds the page copy, leads, and price.
 
 `MONTHLY_PRICE` in `src/data/home.ts` is `$29/month`. Clear it to an empty string to show: Pricing available during your trial call.
 
-Sample companies and people are fictional. Delivery tools are labeled Planned.
+Companies and people in the leads are fictional.
 
 ## Environment
 
