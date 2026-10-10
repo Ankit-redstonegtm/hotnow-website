@@ -1,6 +1,6 @@
 ---
 import LeadCard from './LeadCard.astro';
-import { moreLeads, product } from '../../data/home';
+import { leads, product } from '../../data/home';
 ---
 
 <section class="section" id="leads" aria-labelledby="leads-title">
@@ -10,7 +10,7 @@ import { moreLeads, product } from '../../data/home';
       <p>{product.context}</p>
     </div>
     <div class="lead-grid">
-      {moreLeads.map((lead) => <LeadCard lead={lead} />)}
+      {leads.map((lead) => <LeadCard lead={lead} />)}
     </div>
   </div>
 </section>

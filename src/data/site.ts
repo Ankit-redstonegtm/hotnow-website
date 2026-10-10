@@ -9,7 +9,7 @@ export const site = {
   url: clean(import.meta.env.PUBLIC_SITE_URL, 'https://hotnow.co'),
   title: 'Know who to sell to right now',
   description:
-    'The hard part of selling is knowing who needs you today. HotNow finds 10 companies every day that are in that situation, with the people to contact and the reason to call.',
+    'The hard part of selling is knowing who needs you today. HotNow finds 10 companies every day. Delivered to Slack, Salesforce, email or Teams.',
   imageAlt: 'HotNow. Know who to sell to right now. 10 companies every day, with a reason to call.',
   /**
    * Every trial link uses this URL.

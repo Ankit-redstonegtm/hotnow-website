@@ -36,10 +36,8 @@ export const hero = {
   sub: 'The hard part of selling is knowing who needs what you sell today.',
   body: 'HotNow finds companies in that situation. You get 10 every day, with the people to contact and the reason to call.',
   detail: 'We read the web for what is happening at their business right now.',
-  frameTitle: 'Your leads for today',
-  frameCount: '10 companies found',
-  frameContext: 'For a company that sells field sales software.',
-  frameFoot: 'Summit Roofing, and 9 more today.',
+  morning: 'Your 10 hot leads, in Slack every morning.',
+  channels: 'Delivered to Slack, Salesforce, email or Teams.',
 };
 
 export const leads: Lead[] = [
@@ -150,7 +148,7 @@ export const moreLeads = leads.slice(1);
 
 export const product = {
   heading: "Here's what a lead looks like.",
-  context: 'Same day. Same offer. Two more companies in the situation right now.',
+  context: 'For a company that sells field sales software. Each lead names the company, the people to call, and why they need you right now.',
 };
 
 export const howItWorks = {
@@ -226,6 +224,7 @@ export const why = {
 
 export const comparison = {
   heading: "A list of companies isn't a list of opportunities.",
+  intro: 'A longer list does not tell you who to call today.',
   columns: ['Lead database', 'HotNow'] as const,
   rows: [
     ['Companies matching filters', 'Companies in the situation right now'],
@@ -242,7 +241,7 @@ export const outcomes = {
   items: [
     {
       title: 'The day has a start.',
-      body: 'Ten companies are ready. Each one is in a situation that needs what you sell.',
+      body: 'Your 10 hot leads are in Slack when the morning starts. Each one needs what you sell.',
     },
     {
       title: 'The call has a reason.',
@@ -266,6 +265,61 @@ export const pricing = {
     'Verified emails',
     'Mobile numbers when available',
     'Sources behind the research',
+    'Delivered to Slack, Salesforce, email or Teams',
+  ],
+};
+
+export const delivery = {
+  heading: 'Your 10 hot leads, in Slack every morning.',
+  body: 'They land where you already work. You open the day knowing who to call, and why.',
+  line: 'Delivered to Slack, Salesforce, email or Teams.',
+  channels: [
+    {
+      id: 'slack',
+      name: 'Slack',
+      text: 'The morning message, with the company, the champion, and the reason to call.',
+    },
+    {
+      id: 'salesforce',
+      name: 'Salesforce',
+      text: 'The same lead, on the account.',
+    },
+    {
+      id: 'email',
+      name: 'Email',
+      text: 'The 10 leads, in the inbox.',
+    },
+    {
+      id: 'teams',
+      name: 'Microsoft Teams',
+      text: 'The same note, in the channel your team already uses.',
+    },
+  ],
+};
+
+export const faq = {
+  heading: 'Questions',
+  items: [
+    {
+      q: 'What do I get each day?',
+      a: '10 researched leads. Each company has a reason to need what you sell, and the people to contact.',
+    },
+    {
+      q: 'How do I start?',
+      a: 'Book a quick call. Setup takes 5 minutes. We set it up with you.',
+    },
+    {
+      q: 'What does it cost?',
+      a: 'price',
+    },
+    {
+      q: 'Where do the leads show up?',
+      a: 'Delivered to Slack, Salesforce, email or Teams.',
+    },
+    {
+      q: 'Why these companies?',
+      a: 'Something is happening at the business right now that makes your product relevant. The situations depend on what you sell.',
+    },
   ],
 };
 

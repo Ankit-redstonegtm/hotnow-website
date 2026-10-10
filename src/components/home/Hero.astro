@@ -1,8 +1,9 @@
 ---
 import CtaLink from '../CtaLink.astro';
-import LeadCard from './LeadCard.astro';
+import ChannelRow from './ChannelRow.astro';
+import SlackPreview from './SlackPreview.astro';
 import { site } from '../../data/site';
-import { bookingNote, hero, heroLead, setupNote, trialCta } from '../../data/home';
+import { bookingNote, hero, setupNote, trialCta } from '../../data/home';
 ---
 
 <section class="section hero">
@@ -15,6 +16,7 @@ import { bookingNote, hero, heroLead, setupNote, trialCta } from '../../data/hom
       <p class="sub">{hero.sub}</p>
       <p class="body">{hero.body}</p>
       <p class="body">{hero.detail}</p>
+      <p class="morning">{hero.morning}</p>
       <div class="actions">
         <CtaLink href={site.bookingUrl} label={trialCta} track="Start trial" location="hero" />
         <p class="support">{setupNote}</p>
@@ -22,16 +24,9 @@ import { bookingNote, hero, heroLead, setupNote, trialCta } from '../../data/hom
       </div>
     </div>
     <div class="frame">
-      <div class="frame-top">
-        <div>
-          <p class="frame-kicker">{site.name}</p>
-          <p class="frame-title">{hero.frameTitle}</p>
-          <p class="frame-count">{hero.frameCount}</p>
-        </div>
-      </div>
-      <p class="frame-context">{hero.frameContext}</p>
-      <LeadCard lead={heroLead} />
-      <p class="frame-foot">{hero.frameFoot}</p>
+      <SlackPreview />
+      <ChannelRow />
+      <p class="frame-foot">{hero.channels}</p>
     </div>
   </div>
 </section>

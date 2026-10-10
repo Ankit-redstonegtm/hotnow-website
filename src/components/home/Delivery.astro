@@ -1,0 +1,15 @@
+---
+import ChannelRow from './ChannelRow.astro';
+import { delivery } from '../../data/home';
+---
+
+<section class="section" id="delivery" aria-labelledby="delivery-title">
+  <div class="wrap">
+    <div class="section-copy">
+      <h2 id="delivery-title">{delivery.heading}</h2>
+      <p>{delivery.body}</p>
+      <p>{delivery.line}</p>
+    </div>
+    <ChannelRow detailed />
+  </div>
+</section>
