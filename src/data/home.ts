@@ -32,12 +32,22 @@ export type Lead = {
 };
 
 export const hero = {
-  titleLines: ['Know who to sell to.', 'Right now.'],
-  sub: 'The hard part of selling is knowing who needs what you sell today.',
-  body: 'HotNow finds companies in that situation. You get 10 every day, with the people to contact and the reason to call.',
-  detail: 'We read the web for what is happening at their business right now.',
-  morning: 'Your 10 hot leads, in Slack every morning.',
+  titleLines: ['Find companies', 'that need you now.'],
+  sub: 'HotNow finds companies in a buying situation right now.',
+  body: 'We read deep web data for hiring, new locations, and the problem you solve.',
+  detail: 'Reach them while the reason is fresh. You get 10 companies a day, with ranked contacts and why they need you.',
+  morning: 'Your list, every morning.',
   channels: 'Delivered to Slack, Salesforce, email or Teams.',
+  slackLeadIn: '10 companies need you today.',
+};
+
+export const proof = {
+  label: 'Each morning',
+  items: [
+    { title: '10 companies', text: 'In a buying situation' },
+    { title: 'Ranked contacts', text: 'Priority 1 Champion, then 2 and 3' },
+    { title: 'Why now', text: 'The reason they need you' },
+  ],
 };
 
 export const leads: Lead[] = [
@@ -146,18 +156,13 @@ export const heroLead = leads[0];
 
 export const moreLeads = leads.slice(1);
 
-export const product = {
-  heading: "Here's what a lead looks like.",
-  context: 'For a company that sells field sales software. Each lead names the company, the people to call, and why they need you right now.',
-};
-
 export const howItWorks = {
-  heading: 'Five minutes to set up.',
+  heading: 'Tell us once.',
   steps: [
     {
       number: '1',
       title: 'Tell us what you sell.',
-      body: 'Enter your website. We learn what you do, who you sell to, and what problems you solve.',
+      body: 'Enter your website. We learn what you do, who you sell to, and the problem you solve.',
       preview: {
         kind: 'website' as const,
         label: 'Your website',
@@ -166,24 +171,24 @@ export const howItWorks = {
     },
     {
       number: '2',
-      title: 'Tell us what makes someone a good customer.',
-      body: "Share a few customers you like. Tell us what's usually happening when someone needs your product. That guides the research.",
+      title: 'Tell us when someone needs it.',
+      body: 'Share a few customers you like. Tell us what is usually happening when they need you. That sets the search.',
       preview: {
         kind: 'customers' as const,
         customersLabel: 'Customers you like',
         customers: ['Harbor Home Services', 'Fieldline Medical'],
-        happeningLabel: "What's usually happening",
+        happeningLabel: 'What is usually happening',
         happening: 'A field team is growing across new territories.',
       },
     },
     {
       number: '3',
-      title: 'Get 10 leads every day.',
-      body: 'Each one comes with a reason and the right people to contact.',
+      title: 'Get 10 companies every day.',
+      body: 'Each one has ranked contacts and the reason they need you now.',
       preview: {
         kind: 'list' as const,
         label: "Today's list",
-        count: '10 leads',
+        count: '10 companies',
         rows: [
           { company: 'Summit Roofing', reason: 'Hiring field salespeople' },
           { company: 'Northstar Retail', reason: 'Opening five new stores' },
@@ -193,91 +198,76 @@ export const howItWorks = {
   ],
 };
 
-export const why = {
-  heading: 'Why these 10 companies?',
-  body: 'Because something is happening at their business right now. We read the web for that situation. We look for the pain your product fits. Then we rank the people you should contact.',
-  chain: [
-    {
-      label: 'Situation',
-      text: 'Hiring field salespeople across three territories.',
-    },
-    {
-      label: 'Why it matters',
-      text: 'The sales team is growing right now. That is a reason to talk about managing it.',
-    },
-    {
-      label: 'Who to contact',
-      text: 'Michael Carter, VP of Sales. Priority 1.',
-    },
+export const watches = {
+  heading: 'It runs every morning.',
+  body: 'You describe the situation once. We look for it every day and send the companies that fit.',
+  items: [
+    { name: 'Hiring field salespeople', when: 'Every morning' },
+    { name: 'New stores or territories', when: 'Every morning' },
+    { name: 'A growing sales team', when: 'Every morning' },
+    { name: 'A process you replace', when: 'Every morning' },
   ],
-  situationsHeading: 'What we look for',
-  situations: [
-    'Hiring salespeople',
-    'A retailer opening new stores',
-    'Expanding into new markets',
-    'Hiring for a problem your software solves',
-    'Using a process your product could replace',
-  ],
-  note: 'The situations depend on what you sell. They are not the same for every company.',
-  closer: 'Every lead comes with a reason to call now.',
+  note: 'This set is for a company that sells field sales software. Your situations follow what you sell.',
 };
 
-export const comparison = {
-  heading: "A list of companies isn't a list of opportunities.",
-  intro: 'A longer list does not tell you who to call today.',
-  columns: ['Lead database', 'HotNow'] as const,
-  rows: [
-    ['Companies matching filters', 'Companies in the situation right now'],
-    ['Hundreds of names', '10 researched leads'],
-    ['You research each company', 'We show you why it matters today'],
-    ['You find the right person', 'We rank the people to contact'],
-    ['You build the list', 'Your leads arrive every day'],
-  ],
-};
-
-export const outcomes = {
-  heading: 'What changes for you.',
-  intro: 'You stop guessing who to sell to.',
+export const method = {
+  heading: 'Find. Rank. Explain.',
+  intro: 'Three things, on every company.',
   items: [
     {
-      title: 'The day has a start.',
-      body: 'Your 10 hot leads are in Slack when the morning starts. Each one needs what you sell.',
+      label: 'Find',
+      title: 'Companies in a buying situation.',
+      body: 'Deep web data shows what changed at the business. Hiring. A new location. A team growing into your problem.',
     },
     {
-      title: 'The call has a reason.',
-      body: 'You know who to contact. You know why they might talk today.',
+      label: 'Rank',
+      title: 'The people to contact, in order.',
+      body: 'Priority 1 is the champion. Priority 2 and Priority 3 are the next people to reach.',
     },
     {
-      title: 'The pipeline refills.',
-      body: 'The list comes back every day. Timely accounts keep showing up.',
+      label: 'Explain',
+      title: 'Why they need you now.',
+      body: 'Each company comes with what is happening, and why your product fits today.',
     },
   ],
-  closer: 'Reps know who to call and why. That work is done before the first conversation.',
 };
 
-export const pricing = {
-  heading: 'One plan. 10 leads every day.',
-  plan: 'HotNow',
-  includes: [
-    '10 researched leads every day',
-    'A reason to reach out to each company',
-    'Decision-maker contact details',
-    'Verified emails',
-    'Mobile numbers when available',
-    'Sources behind the research',
-    'Delivered to Slack, Salesforce, email or Teams',
+export const timing = {
+  heading: 'Call while the reason is fresh.',
+  body: 'A buying situation is something happening at the company right now.',
+  groups: [
+    {
+      label: 'Hiring',
+      text: 'New sales roles, or a team moving into new territories.',
+    },
+    {
+      label: 'Expansion',
+      text: 'New stores, new routes, or new markets.',
+    },
+    {
+      label: 'The work',
+      text: 'They are staffing a problem your product already solves.',
+    },
   ],
+  note: 'The situations depend on what you sell. They are not the same for every company.',
+  closer: 'Every company comes with a reason to call now.',
+};
+
+export const product = {
+  heading: 'The company, the people, the reason.',
+  context:
+    'For a company that sells field sales software. Each lead names who to contact, in rank order, and why they need you right now.',
 };
 
 export const delivery = {
-  heading: 'Your 10 hot leads, in Slack every morning.',
-  body: 'They land where you already work. You open the day knowing who to call, and why.',
+  heading: 'It lands where you already work.',
+  body: 'Open the morning and the companies are there. The champion is named. The reason is written.',
   line: 'Delivered to Slack, Salesforce, email or Teams.',
   channels: [
     {
       id: 'slack',
       name: 'Slack',
-      text: 'The morning message, with the company, the champion, and the reason to call.',
+      text: 'The morning note. Company, champion, and the reason to call.',
     },
     {
       id: 'salesforce',
@@ -287,13 +277,41 @@ export const delivery = {
     {
       id: 'email',
       name: 'Email',
-      text: 'The 10 leads, in the inbox.',
+      text: 'The 10 companies, in the inbox.',
     },
     {
       id: 'teams',
       name: 'Microsoft Teams',
-      text: 'The same note, in the channel your team already uses.',
+      text: 'The same note, in the channel your team uses.',
     },
+  ],
+};
+
+export const comparison = {
+  heading: 'A list of names is not a buying situation.',
+  intro: 'Filters can return companies that look right. They do not show who needs you today.',
+  columns: ['Lead database', 'HotNow'] as const,
+  rows: [
+    ['Companies that match filters', 'Companies in a buying situation'],
+    ['A long list of names', '10 companies every day'],
+    ['You research each one', 'The reason is already written'],
+    ['You look for a contact', 'Priority 1 Champion, then 2 and 3'],
+    ['You rebuild the list', 'The list arrives every morning'],
+  ],
+};
+
+export const pricing = {
+  heading: 'One plan. 10 companies every day.',
+  plan: 'HotNow',
+  includes: [
+    '10 companies every day',
+    'Each one in a buying situation',
+    'Ranked contacts, Priority 1 Champion first',
+    'Why they need you now',
+    'Verified emails',
+    'Mobile numbers when available',
+    'Sources behind the research',
+    'Delivered to Slack, Salesforce, email or Teams',
   ],
 };
 
@@ -302,7 +320,11 @@ export const faq = {
   items: [
     {
       q: 'What do I get each day?',
-      a: '10 researched leads. Each company has a reason to need what you sell, and the people to contact.',
+      a: '10 companies in a buying situation. Each one has ranked contacts and the reason they need you now.',
+    },
+    {
+      q: 'How do you find the companies?',
+      a: 'We read deep web data for what is happening at the business. The situations depend on what you sell.',
     },
     {
       q: 'How do I start?',
@@ -313,19 +335,19 @@ export const faq = {
       a: 'price',
     },
     {
-      q: 'Where do the leads show up?',
+      q: 'Where do they show up?',
       a: 'Delivered to Slack, Salesforce, email or Teams.',
     },
     {
-      q: 'Why these companies?',
-      a: 'Something is happening at the business right now that makes your product relevant. The situations depend on what you sell.',
+      q: 'Who do I contact?',
+      a: 'Priority 1 is the champion. Priority 2 and Priority 3 are the next people to reach.',
     },
   ],
 };
 
 export const finalCta = {
-  heading: 'Know who to sell to tomorrow.',
-  body: "Tell us what you sell. We'll find companies that need it right now.",
+  heading: 'Find who needs you tomorrow.',
+  body: 'Tell us what you sell. We send 10 companies in a buying situation, with the people to call.',
 };
 
 export function priceState(price: string = MONTHLY_PRICE) {

@@ -1,12 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
 import Hero from '../components/home/Hero.astro';
-import Comparison from '../components/home/Comparison.astro';
 import HowItWorks from '../components/home/HowItWorks.astro';
+import Watches from '../components/home/Watches.astro';
+import Method from '../components/home/Method.astro';
+import Timing from '../components/home/Timing.astro';
 import Product from '../components/home/Product.astro';
-import WhyThese from '../components/home/WhyThese.astro';
 import Delivery from '../components/home/Delivery.astro';
-import Outcomes from '../components/home/Outcomes.astro';
+import Comparison from '../components/home/Comparison.astro';
 import Pricing from '../components/home/Pricing.astro';
 import Faq from '../components/home/Faq.astro';
 import FinalCta from '../components/home/FinalCta.astro';
@@ -15,12 +16,13 @@ import { site } from '../data/site';
 
 <Base title={site.title} description={site.description} imageAlt={site.imageAlt}>
   <Hero />
-  <Comparison />
   <HowItWorks />
+  <Watches />
+  <Method />
+  <Timing />
   <Product />
-  <WhyThese />
   <Delivery />
-  <Outcomes />
+  <Comparison />
   <Pricing />
   <Faq />
   <FinalCta />

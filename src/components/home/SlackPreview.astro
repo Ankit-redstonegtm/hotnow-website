@@ -1,6 +1,6 @@
 ---
 import ChannelIcon from './ChannelIcon.astro';
-import { heroLead, leads } from '../../data/home';
+import { hero, heroLead, leads } from '../../data/home';
 
 const others = leads.slice(1);
 const champion = heroLead.contacts[0];
@@ -19,7 +19,7 @@ const champion = heroLead.contacts[0];
         <span class="slack-app">APP</span>
         <span class="slack-time">9:00 AM</span>
       </p>
-      <p class="slack-lead-in">Your 10 hot leads are ready.</p>
+      <p class="slack-lead-in">{hero.slackLeadIn}</p>
       <div class="slack-card">
         <p class="slack-company">
           {heroLead.company}

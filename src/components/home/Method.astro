@@ -1,0 +1,23 @@
+---
+import { method } from '../../data/home';
+---
+
+<section class="section" aria-labelledby="method-title">
+  <div class="wrap">
+    <div class="section-copy">
+      <h2 id="method-title">{method.heading}</h2>
+      <p>{method.intro}</p>
+    </div>
+    <ol class="method-grid">
+      {
+        method.items.map((item) => (
+          <li>
+            <p class="method-label">{item.label}</p>
+            <h3>{item.title}</h3>
+            <p>{item.body}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

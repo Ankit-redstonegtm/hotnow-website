@@ -1,0 +1,24 @@
+---
+import { timing } from '../../data/home';
+---
+
+<section class="section" id="why-now" aria-labelledby="timing-title">
+  <div class="wrap">
+    <div class="section-copy">
+      <h2 id="timing-title">{timing.heading}</h2>
+      <p>{timing.body}</p>
+    </div>
+    <ul class="timing-grid">
+      {
+        timing.groups.map((group) => (
+          <li>
+            <p class="field-label">{group.label}</p>
+            <p>{group.text}</p>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="note">{timing.note}</p>
+    <p class="closer">{timing.closer}</p>
+  </div>
+</section>
