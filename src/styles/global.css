@@ -331,9 +331,12 @@ h3 {
   pointer-events: none;
 }
 
-.hero-grid {
+.hero-layout {
   position: relative;
   z-index: 1;
+}
+
+.hero-grid {
   display: grid;
   gap: 2.25rem;
 }
@@ -943,8 +946,18 @@ h3 {
   .lead-grid,
   .steps,
   .chain,
-  .outcome-grid {
+  .outcome-grid,
+  .method-grid,
+  .timing-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .proof ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .watch-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lead-grid {
@@ -998,6 +1011,84 @@ h3 {
   margin-top: 0.85rem;
   font-weight: 600;
   letter-spacing: -0.02em;
+}
+
+.proof {
+  margin-top: 1.35rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+
+.proof ul {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+.proof li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+
+.proof strong {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.proof span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.watch-grid,
+.method-grid,
+.timing-grid {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.watch-grid li,
+.method-grid li,
+.timing-grid li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.watch-name {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.watch-when,
+.method-label {
+  color: var(--violet-text);
+  font-weight: 600;
+}
+
+.watch-when {
+  font-size: 0.8rem;
+}
+
+.method-label {
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+}
+
+.method-grid p,
+.timing-grid p {
+  color: var(--soft);
+}
+
+.timing-grid .field-label {
+  color: var(--ink);
+  font-size: 0.95rem;
 }
 
 .slack {

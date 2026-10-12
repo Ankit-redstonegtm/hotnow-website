@@ -1,0 +1,23 @@
+---
+import { watches } from '../../data/home';
+---
+
+<section class="section" aria-labelledby="watch-title">
+  <div class="wrap">
+    <div class="section-copy">
+      <h2 id="watch-title">{watches.heading}</h2>
+      <p>{watches.body}</p>
+    </div>
+    <ul class="watch-grid">
+      {
+        watches.items.map((item) => (
+          <li>
+            <p class="watch-name">{item.name}</p>
+            <p class="watch-when">{item.when}</p>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="note">{watches.note}</p>
+  </div>
+</section>
