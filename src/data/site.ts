@@ -7,11 +7,11 @@ export const site = {
   name: 'HotNow',
   domain: 'hotnow.co',
   url: clean(import.meta.env.PUBLIC_SITE_URL, 'https://hotnow.co'),
-  title: 'Find companies that need you now',
+  title: 'Find who needs you right now',
   description:
     'HotNow finds companies in a buying situation from deep web data. 10 a day, with ranked contacts and the reason they need you. Delivered to Slack, Salesforce, email or Teams.',
   imageAlt:
-    'HotNow. Find companies that need you now. 10 companies every day, with ranked contacts and a reason to call.',
+    'HotNow. Find who needs you right now. 10 companies every day, with ranked contacts and a reason to call.',
   /**
    * Every trial link uses this URL.
    * Override with PUBLIC_BOOKING_URL. The fallback is the shared discovery call.

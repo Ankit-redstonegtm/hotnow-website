@@ -32,7 +32,7 @@ export type Lead = {
 };
 
 export const hero = {
-  titleLines: ['Find companies', 'that need you now.'],
+  titleLines: ['Find who needs', 'you right now.'],
   sub: 'HotNow finds companies in a buying situation right now.',
   body: 'We read deep web data for hiring, new locations, and the problem you solve.',
   detail: 'Reach them while the reason is fresh. You get 10 companies a day, with ranked contacts and why they need you.',
