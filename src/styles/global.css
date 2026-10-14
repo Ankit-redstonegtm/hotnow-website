@@ -200,6 +200,42 @@ h3 {
   margin-top: 1.05rem;
 }
 
+.domain-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  width: 100%;
+  max-width: 420px;
+  align-items: stretch;
+  margin-bottom: 0.25rem;
+}
+
+.domain-input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.75rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  color: inherit;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.domain-input::placeholder {
+  color: var(--muted);
+}
+
+.domain-input:focus {
+  outline: none;
+  border-color: var(--violet);
+  box-shadow: 0 0 0 3px rgba(240, 51, 59, 0.15);
+}
+
+.domain-cta .btn {
+  width: 100%;
+}
+
 .support {
   color: var(--muted);
   font-size: 0.95rem;

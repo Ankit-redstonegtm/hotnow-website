@@ -9,7 +9,7 @@ export const MONTHLY_PRICE = '$29/month';
 
 export const priceFallback = 'Pricing shown when you start your free trial.';
 
-export const trialCta = 'Start your free trial';
+export const trialCta = 'Start getting 10 high-intent leads every day';
 
 export const bookingNote = 'Enter your domain to start. No credit card.';
 

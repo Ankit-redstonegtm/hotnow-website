@@ -1,0 +1,49 @@
+---
+// Domain-first CTA. A plain GET form to the signup page, so submitting navigates
+// to `${action}?domain=<entered>` with no JS required. The app then warms the
+// user's research while they sign up, so their summary is ready on arrival.
+interface Props {
+  action: string; // signup URL, e.g. https://app.hotnow.co/signup
+  label: string;
+  location?: string;
+}
+const { action, label, location } = Astro.props;
+---
+
+<form
+  class="domain-cta"
+  action={action}
+  method="get"
+  data-track="Start trial"
+  data-track-location={location}
+>
+  <input
+    class="domain-input"
+    type="text"
+    name="domain"
+    inputmode="url"
+    autocomplete="off"
+    autocapitalize="off"
+    spellcheck="false"
+    placeholder="yourcompany.com"
+    aria-label="Your company domain"
+    required
+  />
+  <button class="btn" type="submit">{label}</button>
+</form>
+
+<script>
+  // Progressive enhancement: tidy the domain before the GET navigation.
+  document.querySelectorAll<HTMLFormElement>('form.domain-cta').forEach((form) => {
+    form.addEventListener('submit', () => {
+      const input = form.querySelector<HTMLInputElement>('input[name="domain"]');
+      if (!input) return;
+      input.value = input.value
+        .trim()
+        .toLowerCase()
+        .replace(/^https?:\/\//, '')
+        .replace(/^www\./, '')
+        .split('/')[0];
+    });
+  });
+</script>
