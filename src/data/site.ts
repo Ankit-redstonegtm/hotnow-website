@@ -12,13 +12,14 @@ export const site = {
     'The hard part of selling is knowing who needs you today. HotNow finds 10 companies every day. Delivered to Slack, Salesforce, email or Teams.',
   imageAlt: 'HotNow. Know who to sell to right now. 10 companies every day, with a reason to call.',
   /**
-   * Every trial link uses this URL.
-   * Override with PUBLIC_BOOKING_URL. The fallback is the shared discovery call.
+   * The self-serve app. Every primary CTA sends people here to sign up.
+   * Override the origin with PUBLIC_APP_URL.
    */
-  bookingUrl: clean(
-    import.meta.env.PUBLIC_BOOKING_URL,
-    'https://cal.com/ankit-singh-gtm/discovery-call',
-  ),
+  appUrl: clean(import.meta.env.PUBLIC_APP_URL, 'https://app.hotnow.co'),
+  /** Primary CTA target: sign up for the app. */
+  bookingUrl: `${clean(import.meta.env.PUBLIC_APP_URL, 'https://app.hotnow.co')}/signup`,
+  /** Returning users log in here. */
+  loginUrl: `${clean(import.meta.env.PUBLIC_APP_URL, 'https://app.hotnow.co')}/login`,
   /**
    * Public contact email. Leave empty until one exists.
    * The footer shows a booking link either way, and adds this address when set.

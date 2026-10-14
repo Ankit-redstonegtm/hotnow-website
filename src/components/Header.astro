@@ -11,6 +11,7 @@ import { nav, navCta, site } from '../data/site';
       {nav.map((item) => <a href={item.href}>{item.label}</a>)}
     </nav>
     <div class="header-end">
+      <a class="login-link" href={site.loginUrl} data-track="Log in" data-track-location="nav">Log in</a>
       <CtaLink
         href={site.bookingUrl}
         label={navCta}

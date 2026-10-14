@@ -13,17 +13,15 @@ import { nav, site } from '../data/site';
       {nav.map((item) => <a href={item.href}>{item.label}</a>)}
     </nav>
     <div class="footer-contact">
-      <p class="field-label">Contact</p>
+      <p class="field-label">Get started</p>
       <a
         href={site.bookingUrl}
         data-track="Start trial"
         data-track-location="footer"
-        target="_blank"
-        rel="noopener noreferrer"
       >
-        Book a call
-        <span class="sr-only"> (opens in a new tab)</span>
+        Start free trial
       </a>
+      <a href={site.loginUrl} data-track="Log in" data-track-location="footer">Log in</a>
       {
         site.email && (
           <a href={`mailto:${site.email}`}>{site.email}</a>

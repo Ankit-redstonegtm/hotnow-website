@@ -7,11 +7,11 @@
  */
 export const MONTHLY_PRICE = '$29/month';
 
-export const priceFallback = 'Pricing available during your trial call.';
+export const priceFallback = 'Pricing shown when you start your free trial.';
 
 export const trialCta = 'Start your free trial';
 
-export const bookingNote = 'Book a quick call to get started.';
+export const bookingNote = 'Enter your domain to start. No credit card.';
 
 export const setupNote = '5-minute setup.';
 
@@ -306,7 +306,7 @@ export const faq = {
     },
     {
       q: 'How do I start?',
-      a: 'Book a quick call. Setup takes 5 minutes. We set it up with you.',
+      a: 'Enter your company domain and start free. Setup takes about 5 minutes — no call required.',
     },
     {
       q: 'What does it cost?',
