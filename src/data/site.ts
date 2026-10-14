@@ -28,7 +28,7 @@ export const site = {
   locale: 'en_US',
 };
 
-export const navCta = 'Start free trial';
+export const navCta = 'Get started';
 
 export const nav = [
   { label: 'How it works', href: '/#how-it-works' },

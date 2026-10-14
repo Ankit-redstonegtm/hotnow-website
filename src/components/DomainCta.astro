@@ -11,6 +11,7 @@ const { action, label, location } = Astro.props;
 ---
 
 <form
+  id="start"
   class="domain-cta"
   action={action}
   method="get"
@@ -46,4 +47,21 @@ const { action, label, location } = Astro.props;
         .split('/')[0];
     });
   });
+
+  // Any "Get started" link (e.g. the header CTA) funnels into the domain box so the
+  // pre-warm starts the moment they type + submit - the work begins during sign-in.
+  const focusStart = () => {
+    const input = document.querySelector<HTMLInputElement>('#start input[name="domain"]');
+    if (input) {
+      input.focus({ preventScroll: true });
+      input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+  document.querySelectorAll<HTMLAnchorElement>('a[href="#start"]').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      focusStart();
+    });
+  });
+  if (location.hash === '#start') setTimeout(focusStart, 200);
 </script>
