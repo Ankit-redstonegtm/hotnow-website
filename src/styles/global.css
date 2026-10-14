@@ -8,11 +8,11 @@
   --line: #ece8e3;
   --line-strong: #ded8d1;
   /* accent tokens kept under the --violet* names so existing rules inherit ember */
-  --violet: #d6451f;
-  --violet-deep: #b23a18;
-  --violet-text: #c0431d;
-  --ember: #d6451f;
-  --accent-soft: #fbeae3;
+  --violet: #f0333b;
+  --violet-deep: #cf1f27;
+  --violet-text: #cf1f27;
+  --ember: #f0333b;
+  --accent-soft: #fdecec;
   --sans: "Geist Sans", "Geist", "Segoe UI", Helvetica, Arial, sans-serif;
   --wrap: 1120px;
   --header: 4.5rem;
@@ -34,7 +34,7 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(900px 420px at 70% -80px, rgba(214, 69, 31, 0.07), transparent 70%),
+    radial-gradient(900px 420px at 70% -80px, rgba(240, 51, 59, 0.07), transparent 70%),
     var(--bg);
   color: var(--ink);
   font-family: var(--sans);
@@ -82,7 +82,7 @@ svg {
 }
 
 ::selection {
-  background: rgba(214, 69, 31, 0.45);
+  background: rgba(240, 51, 59, 0.45);
   color: #fff;
 }
 
@@ -176,7 +176,7 @@ h3 {
   font-size: 1rem;
   line-height: 1.2;
   text-decoration: none;
-  box-shadow: 0 8px 22px rgba(214, 69, 31, 0.22);
+  box-shadow: 0 8px 22px rgba(240, 51, 59, 0.22);
   transition: filter 120ms ease, transform 120ms ease;
 }
 
@@ -342,7 +342,7 @@ h3 {
   height: 520px;
   right: 0;
   top: -40px;
-  background: radial-gradient(circle, rgba(214, 69, 31, 0.28), transparent 68%);
+  background: radial-gradient(circle, rgba(240, 51, 59, 0.28), transparent 68%);
   pointer-events: none;
 }
 
@@ -365,7 +365,7 @@ h3 {
 }
 
 .grad {
-  background: linear-gradient(100deg, #1a1715 10%, #d6451f 100%);
+  background: linear-gradient(100deg, #1a1715 10%, #f0333b 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -454,8 +454,8 @@ h3 {
   flex: none;
   border-radius: 999px;
   padding: 0.28rem 0.6rem;
-  background: rgba(214, 69, 31, 0.14);
-  border: 1px solid rgba(214, 69, 31, 0.35);
+  background: rgba(240, 51, 59, 0.14);
+  border: 1px solid rgba(240, 51, 59, 0.35);
   color: var(--violet-text);
   font-size: 0.75rem;
   font-weight: 600;
@@ -524,8 +524,8 @@ h3 {
   margin-top: 0.9rem;
   padding: 0.85rem 0.9rem;
   border-radius: 12px;
-  background: rgba(214, 69, 31, 0.08);
-  border: 1px solid rgba(214, 69, 31, 0.18);
+  background: rgba(240, 51, 59, 0.08);
+  border: 1px solid rgba(240, 51, 59, 0.18);
 }
 
 .why-now .field-label {
@@ -600,7 +600,7 @@ h3 {
   width: 1.75rem;
   height: 1.75rem;
   border-radius: 8px;
-  background: rgba(214, 69, 31, 0.16);
+  background: rgba(240, 51, 59, 0.16);
   color: var(--violet-text);
   font-size: 0.85rem;
   font-weight: 600;
@@ -773,7 +773,7 @@ h3 {
 .compare td:last-child {
   color: var(--ink);
   font-weight: 600;
-  background: rgba(214, 69, 31, 0.08);
+  background: rgba(240, 51, 59, 0.08);
 }
 
 .plan {
@@ -823,7 +823,7 @@ h3 {
 .final {
   position: relative;
   background:
-    radial-gradient(700px 280px at 15% 0%, rgba(214, 69, 31, 0.28), transparent 70%),
+    radial-gradient(700px 280px at 15% 0%, rgba(240, 51, 59, 0.28), transparent 70%),
     #ffffff;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
