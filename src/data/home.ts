@@ -32,7 +32,7 @@ export type Lead = {
 };
 
 export const hero = {
-  titleLines: ['Know who to sell to.', 'Right now.'],
+  titleLines: ['Know who to contact today.', 'And why.'],
   sub: 'The hard part of selling is knowing who needs what you sell today.',
   body: 'HotNow finds companies in that situation. You get 10 every day, with the people to contact and the reason to call.',
   detail: 'We read the web for what is happening at their business right now.',
@@ -306,7 +306,7 @@ export const faq = {
     },
     {
       q: 'How do I start?',
-      a: 'Enter your company domain and start free. Setup takes about 5 minutes — no call required.',
+      a: 'Enter your company domain and start free. Setup takes about 5 minutes. No call required.',
     },
     {
       q: 'What does it cost?',
@@ -324,7 +324,7 @@ export const faq = {
 };
 
 export const finalCta = {
-  heading: 'Know who to sell to tomorrow.',
+  heading: 'Know who to contact tomorrow.',
   body: "Tell us what you sell. We'll find companies that need it right now.",
 };
 

@@ -7,10 +7,10 @@ export const site = {
   name: 'HotNow',
   domain: 'hotnow.co',
   url: clean(import.meta.env.PUBLIC_SITE_URL, 'https://hotnow.co'),
-  title: 'Know who to sell to right now',
+  title: 'Know who to contact today, and why',
   description:
-    'The hard part of selling is knowing who needs you today. HotNow finds 10 companies every day. Delivered to Slack, Salesforce, email or Teams.',
-  imageAlt: 'HotNow. Know who to sell to right now. 10 companies every day, with a reason to call.',
+    'Know which companies are worth contacting today, and why. HotNow finds companies in a situation that fits what you sell, with the people to contact and the reason to call. Delivered to Slack, Salesforce, email or Teams.',
+  imageAlt: 'HotNow. Know who to contact today, and why. Companies worth contacting, with a reason to call.',
   /**
    * The self-serve app. Every primary CTA sends people here to sign up.
    * Override the origin with PUBLIC_APP_URL.
