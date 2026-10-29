@@ -1,9 +1,5 @@
 ---
-import { faq, priceState } from '../../data/home';
-
-const price = priceState();
-const cost =
-  price.kind === 'price' ? `One plan. HotNow is ${price.text}.` : price.text;
+import { faq } from '../../data/home';
 ---
 
 <section class="section" id="faq" aria-labelledby="faq-title">
@@ -16,7 +12,7 @@ const cost =
         faq.items.map((item) => (
           <details>
             <summary>{item.q}</summary>
-            <p>{item.a === 'price' ? cost : item.a}</p>
+            <p>{item.a}</p>
           </details>
         ))
       }

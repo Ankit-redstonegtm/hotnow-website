@@ -33,5 +33,4 @@ export const navCta = 'Get started';
 export const nav = [
   { label: 'How it works', href: '/#how-it-works' },
   { label: 'Leads', href: '/#leads' },
-  { label: 'Pricing', href: '/#pricing' },
 ] as const;
