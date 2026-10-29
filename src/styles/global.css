@@ -389,6 +389,22 @@ h3 {
   gap: 2.25rem;
 }
 
+.hero-video {
+  width: min(860px, 100%);
+  margin-inline: auto;
+  justify-self: center;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  background: #f4f1ee;
+}
+
+.hero-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .hero h1 {
   font-size: 2.85rem;
   line-height: 0.98;
@@ -981,6 +997,21 @@ h3 {
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
     gap: 3rem;
     align-items: start;
+  }
+
+  .hero-copy {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .hero .frame {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .hero-video {
+    grid-column: 1 / -1;
+    grid-row: 2;
   }
 
   .hero h1 {
