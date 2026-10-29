@@ -389,6 +389,13 @@ h3 {
   gap: 2.25rem;
 }
 
+.hero-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .hero-video {
   width: 100%;
   border-radius: 20px;
@@ -402,6 +409,38 @@ h3 {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.sound-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.7rem;
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.sound-toggle:hover {
+  color: var(--ink);
+}
+
+.sound-icon {
+  display: block;
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.sound-toggle[aria-pressed='false'] .sound-icon-on,
+.sound-toggle[aria-pressed='true'] .sound-icon-off {
+  display: none;
 }
 
 .hero h1 {
