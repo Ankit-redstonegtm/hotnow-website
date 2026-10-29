@@ -1,7 +1,5 @@
 ---
 import DomainCta from '../DomainCta.astro';
-import ChannelRow from './ChannelRow.astro';
-import SlackPreview from './SlackPreview.astro';
 import { site } from '../../data/site';
 import { bookingNote, hero, setupNote, trialCta } from '../../data/home';
 ---
@@ -25,21 +23,19 @@ import { bookingNote, hero, setupNote, trialCta } from '../../data/home';
     </div>
     <div class="hero-video">
       <video
-        controls
+        autoplay
+        muted
+        loop
         playsinline
-        preload="metadata"
+        controls
+        preload="auto"
         poster="/hotnow-vsl-poster.jpg"
-        width="1280"
-        height="720"
+        width="1920"
+        height="1080"
         aria-label="HotNow"
       >
         <source src="/hotnow-vsl.mp4" type="video/mp4" />
       </video>
-    </div>
-    <div class="frame">
-      <SlackPreview />
-      <ChannelRow />
-      <p class="frame-foot">{hero.channels}</p>
     </div>
   </div>
 </section>
