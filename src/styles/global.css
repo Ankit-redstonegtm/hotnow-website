@@ -621,8 +621,7 @@ h3 {
 
 .step,
 .outcome-grid li,
-.chain li,
-.plan {
+.chain li {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -825,50 +824,6 @@ h3 {
   color: var(--ink);
   font-weight: 600;
   background: rgba(240, 51, 59, 0.08);
-}
-
-.plan {
-  max-width: 34rem;
-  margin-top: 1rem;
-  padding: 1.25rem 1.2rem 1.4rem;
-}
-
-.plan-name {
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
-.price {
-  margin: 0.45rem 0 1rem;
-  font-size: 2.7rem;
-  line-height: 1;
-  font-weight: 600;
-  letter-spacing: -0.04em;
-}
-
-.price-fallback {
-  margin: 0.7rem 0 1rem;
-  font-size: 1.2rem;
-  line-height: 1.4;
-  font-weight: 600;
-}
-
-.includes {
-  display: grid;
-}
-
-.includes li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  padding: 0.7rem 0;
-  border-top: 1px solid var(--line);
-}
-
-.includes svg {
-  flex: none;
-  margin-top: 0.2rem;
-  color: var(--violet-text);
 }
 
 .final {

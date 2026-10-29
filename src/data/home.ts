@@ -1,14 +1,7 @@
 /**
- * Homepage copy, leads, and pricing.
+ * Homepage copy and leads.
  * Companies and people here are fictional. The page does not label them.
- *
- * MONTHLY_PRICE is the single plan price, shown as written.
- * Set it to '' to show priceFallback instead.
  */
-export const MONTHLY_PRICE = '$29/month';
-
-export const priceFallback = 'Pricing shown when you start your free trial.';
-
 export const trialCta = 'Start getting 10 high-intent leads every day';
 
 export const bookingNote = 'Enter your domain to start. No credit card.';
@@ -255,20 +248,6 @@ export const outcomes = {
   closer: 'Reps know who to call and why. That work is done before the first conversation.',
 };
 
-export const pricing = {
-  heading: 'One plan. 10 leads every day.',
-  plan: 'HotNow',
-  includes: [
-    '10 researched leads every day',
-    'A reason to reach out to each company',
-    'Decision-maker contact details',
-    'Verified emails',
-    'Mobile numbers when available',
-    'Sources behind the research',
-    'Delivered to Slack, Salesforce, email or Teams',
-  ],
-};
-
 export const delivery = {
   heading: 'Your 10 hot leads, in Slack every morning.',
   body: 'They land where you already work. You open the day knowing who to call, and why.',
@@ -306,11 +285,7 @@ export const faq = {
     },
     {
       q: 'How do I start?',
-      a: 'Enter your company domain and start free. Setup takes about 5 minutes. No call required.',
-    },
-    {
-      q: 'What does it cost?',
-      a: 'price',
+      a: 'Enter your company domain. Setup takes about 5 minutes. No call required.',
     },
     {
       q: 'Where do the leads show up?',
@@ -327,9 +302,3 @@ export const finalCta = {
   heading: 'Know who to contact tomorrow.',
   body: "Tell us what you sell. We'll find companies that need it right now.",
 };
-
-export function priceState(price: string = MONTHLY_PRICE) {
-  const text = price.trim();
-  if (!text) return { kind: 'fallback' as const, text: priceFallback };
-  return { kind: 'price' as const, text };
-}
