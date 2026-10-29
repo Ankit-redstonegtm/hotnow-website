@@ -1,0 +1,101 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Privacy policy"
+  description="How HotNow handles your account, your leads, and the data used to find companies and contacts."
+>
+  <section class="section">
+    <div class="wrap privacy">
+      <h1>Privacy policy</h1>
+      <p class="updated">Last updated: October 29, 2026</p>
+
+      <p>
+        HotNow sends you researched companies that may need what you sell, with contacts and sources.
+      </p>
+
+      <h2>What we collect</h2>
+      <p>We collect your name and email.</p>
+      <p>If you sign in with Google, Google shares your name, email, and profile picture only.</p>
+      <p>We collect the company website or domain you enter.</p>
+      <p>We collect the leads and settings in your account.</p>
+      <p>
+        If you connect Slack, we store the connection details. We store them encrypted. We use them only to
+        post leads to the channel you chose.
+      </p>
+      <p>We keep basic usage logs.</p>
+
+      <h2>Companies and contacts</h2>
+      <p>HotNow researches companies and business contacts from public sources and data providers.</p>
+
+      <h2>How we use it</h2>
+      <p>
+        We use it to run your account, research your company, find and deliver leads, support you, and keep
+        the service working.
+      </p>
+      <p>We do not sell personal data.</p>
+      <p>We do not use Google user data for ads.</p>
+
+      <h2>Who handles data for us</h2>
+      <ul>
+        <li>Supabase stores the database and handles sign-in.</li>
+        <li>Vercel and Render host the service.</li>
+        <li>Google handles sign-in.</li>
+        <li>Slack delivers leads if you connect it.</li>
+        <li>Research and data providers help us find companies and contacts.</li>
+      </ul>
+
+      <h2>Your choices</h2>
+      <p>You can disconnect Slack at any time.</p>
+      <p>
+        Email <a href="mailto:ankit@redstonegtm.com">ankit@redstonegtm.com</a> to ask for a copy of your data, or
+        to ask us to delete your data and account.
+      </p>
+
+      <h2>Changes</h2>
+      <p>When this page changes, we will update the page and the date above.</p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .privacy {
+    max-width: 40rem;
+  }
+
+  .privacy .updated {
+    margin-top: 0.85rem;
+    color: var(--muted);
+  }
+
+  .privacy h2 {
+    margin-top: 2.25rem;
+    font-size: 1.35rem;
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+  }
+
+  .privacy p,
+  .privacy ul {
+    margin-top: 0.85rem;
+    color: var(--soft);
+  }
+
+  .privacy ul {
+    padding-left: 1.15rem;
+    list-style: disc;
+  }
+
+  .privacy li + li {
+    margin-top: 0.45rem;
+  }
+
+  .privacy a {
+    color: var(--ink);
+    font-weight: 500;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+</style>
