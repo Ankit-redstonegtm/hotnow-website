@@ -23,6 +23,19 @@ import { bookingNote, hero, setupNote, trialCta } from '../../data/home';
         <p class="support">{bookingNote}</p>
       </div>
     </div>
+    <div class="hero-video">
+      <video
+        controls
+        playsinline
+        preload="metadata"
+        poster="/hotnow-vsl-poster.jpg"
+        width="1280"
+        height="720"
+        aria-label="HotNow"
+      >
+        <source src="/hotnow-vsl.mp4" type="video/mp4" />
+      </video>
+    </div>
     <div class="frame">
       <SlackPreview />
       <ChannelRow />
